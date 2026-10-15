@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% with messages = get_flashed_messages() %} 
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+<form action="/generate_recipe" method="POST">
+    <label for="ingredients">Ingredients</label>
+    <textarea name="ingredients" id="ingredients" placeholder="List your ingredients" required></textarea>
+    <button action="submit">Generate a recipe!</button>
+</form>
+
+
+{% endblock %}
