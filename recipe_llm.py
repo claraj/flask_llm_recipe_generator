@@ -8,6 +8,7 @@ import logging as log
 GOOGLE_API_KEY = os.environ.get('GEMINI_API_KEY')
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
+# TODO read this from a file 
 system_instruction = """Use the ingredients given to create a recipe"""
 
 def generate_recipe(ingredients):
