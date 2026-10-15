@@ -5,7 +5,7 @@ from model import Recipe
 import logging as log
 
 
-GOOGLE_API_KEY =  '1234' #os.environ.get('GEMINI_API_KEY')
+GOOGLE_API_KEY = os.environ.get('GEMINI_API_KEY')
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
 system_instruction = """Use the ingredients given to create a recipe"""
